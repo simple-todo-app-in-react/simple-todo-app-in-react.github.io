@@ -1,152 +1,518 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/syr6bns.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/syr6bns.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<div class="header">
-
-  <h1>  <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="70">   React Basics For Beginners</h1>
-</div>
-<div class="subheader">
-  <span class="name">Debora Kwon</span>
-</div>
-
-<div class="row">
-    <div class="card">
-      <br>
-      <br>
-      <h2>Before diving into React 🏊</h2>
-  
-      <p>When looking more closely at any programming languages, developers have sometimes needed to find a more efficient one to improve their development experience. That’s the common background for creating a new programming language. So, I would like to introduce a brief history about React.js to you. I am going to talk about Facebook (currently Meta) as well, since React.js was created by Facebook developers.
-
-        <p>React, sometimes referred to as a front-end JavaScript framework, is a JavaScript library created by Facebook. React is a tool for building UI components for the web.</p>
-         
-        <p>How does React work? At its core, React makes use of a virtual DOM. Instead of making changes to the browser’s DOM directly, React creates and manages a virtual DOM in memory, where it makes any necessary changes before finally updating the browser DOM.</p>
-        
-      <p>Additionally, React only changes what needs to be changed! React will figure out what has changed compared to the previous state of the browser, and then changes only what needs to be updated. While this blog post focuses on using React in practice, if you’d like to learn more about how React does this, it would be a good idea to look at the official React documentation.
-        </p>
-        <br>
-        <br>
-        <h2>React History</h2>
-        <p>As mentioned earlier, React was developed at Facebook (now Meta). 
-          In 2011, before the name “React” was even used, developers were having trouble maintaining their code. 
-          At the time, more developers were needed on the team to keep the product running smoothly. 
-          Thus, an urgent upgrade became necessary due to the lack of efficiency. 
-          Aside from efficiency, the user experience was also an area of concern. 
-          It was around that time that the developer Jordan Walke created a prototype that was called FaxJS (aka React). 
-          Though having a different name at the beginning, it was the start of React.js.
-        </p>
-        <br>
-        <p>Shortly after, in 2012, Instagram was acquired by Facebook. 
-          At that time, the Instagram developers pressured Facebook as they also wanted to adopt Facebook’s new technology. 
-          Then in the next year, 2013, an event called JS ConfUS happened where Jordan Walke introduced React to the public. 
-          Over the next couple of years already major international companies started using React and even the first stable version of React Developer Tools was released, to further help development of React apps.</p>
-        <br>
-        <p>When learning programming languages, that means also we need to know about what the differences are, such as the language structures. 
-          Personally, I would like to see and understand basic structures first in any language that I am learning. 
-          So, I would like to introduce some basic structures which are useful in a practical way.</p>
-        <br>
-        <br>
-        <h2>🦘Before jumping into structure of React</h2>
-        <img class="examplePrettier" src="./Prettier.PNG">
-        <p>When you start using React, you can use Visual Studio Code (a decent IDE for React), and download Node.js for installing and running React. Among extensions in VScode, I would recommend downloading “Prettier” for code formatting. It will automatically make your codes and lots of brackets nicely aligned.
-        </p>
-        <br>
-        <br>
-        <h2>Essential structure of React</h2>
-        <img class="example" src="./Photo0.PNG">
-        <p>From the example above, there are <span class="highlight"> import / function / return / export parts</span> in the basic structure in React.</p>
-        <p>🔹 First of all, for using React, you need to create a file such as <span class="highlight">.js OR .jsx. </span></p>
-        <p>🔹 After that, you need to import React first. When connecting to / including another css file, you need to add it into the import part. So, later on, the import field can be really expanded.</p>
-        <p>🔹 The next main field is a function which returns JSX code and must start with a capital letter. Also, this function is called a component. I am presenting a basic way to create a function.</p>
-        <p>There is a more simple way to create a function such as: <img class="example" src="./ComponentArrowFunction.png"> </p>
-        <p>🔹 Inside of a function, you must add <span class="highlight">return ( ... );</span> as well. </p>
-        <p>In return, you are usually returning html things like &lt;div&gt;...&lt;/div&gt;, or using other functions by adding &lt;FunctionName /&gt; that I will explain and show more things after this basic structure.</p>
-        <p>🔹 The last part of the structure is export. <br>The basic structure of export would be “export default FunctionName;” which allows the function to be used in other functions, or files. </p>
-        <br>
-        <br>
-        <h2>Props</h2>
-        <p>
-
-          React components aka functions use props to communicate with each other. Parent components are able to pass some information to their child components by giving them props.
-           
-          In the above basic structure example, if there are more things in &lt;FunctionName /&gt; like this: 
-          </p>
-          <img class="example" src="./propPhoto.png">
-        <p>
-          then this one is called “passing props to the child component(function)”. And then whenever using the child component, a developer must include the props inside of the child component under the parent component.
-          </p>
-        <p>   
-          You can change the value of  “prop1” or the “prop2” inside the parent component without having to think about how the child component uses them, as long as the value has the same structure that the child component expects. Similarly, you can change how the child component uses these props, without looking at the parent component.
-          </p>
-          <p>Props are similar in appearance to HTML attributes, but with props you are able to pass any JavaScript value in them. That includes objects, arrays, and even functions</p>
-        <br>
-        <br>
-        <h2>Types of props</h2>
-        <p class="centerP">🔹	Familiar props: HTML tags, CSS classes</p>
-        <img class="example" src="./ComponentExample1.PNG">
-        <br>
-        <br>
-        <br>
-        <p class="centerP">🔹 Passing props to a component: like &lt;FunctionName /&gt;</p>
-        <img class="example" src="./propPhoto.png">
-          <br>
-          <br>
-          <br>
-          <br><span class="textbox">⭐ Pitfall ⭐  Don’t miss the pair of curly brackets inside of parenthesis. </span>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        <h2>useState()</h2>
-        <img src="./Photo1.PNG" class="example">
-        <p>
-          Let's dig into more React things is something called “useState()” 
-          <br>(I will talk about this soon). For this, first of all, you need to add <span class="highlight">import { useState } from 'react';</span> in the import field. You also need to set attribute and setAttributeName usually inside of square brackets which is called “array destructuring”. So whenever you are using the App function, then useState() will remember its current value when rendering for achieving an interactive user experience.
-          </p>
-          <p>useState is a React Hook that lets you add a state variable to your component. For example, if a user clicked on any button, and that causes “setAttributeName” to be called, then the function will render and will change the “attribute” state variable. This is a big reason why React appeared: because a good user interaction experience was needed.</p>
-          <p>In addition, useState prefers to be used with some event handlers. 
-            <br>i.e) click handlers, on-change handlers, submit handlers, on-hover handlers, etc.
-          </p>
-          <br>
-          <br>
-          <br>
-          <p>When learning a new language, you can give yourself a jumpstart by understanding / using important terms in that language for googling or reading docs.</p>
-          <h2>Major Terms in React</h2>
-          <div class="smallerText">
-          <p>🔹Component: This is what I called a function in this blog, and in React a component is a JavaScript function that returns JSX to be shown in the browser. When making Components, they can be small like a button or simple header, and there is no limit to how large they can be, like creating a whole page!</p>
-          <p>🔹JSX: This is a way to create HTML and other components by using a structure that looks like HTML, but is capable of showing dynamic information and has more rules (such as in the JSX rules section above). JSX is used in components, usually in the return field.</p>
-          <p>🔹Props: These are pieces of data that can be used to pass information between components. Particularly, Parent components give props to child components which means that the child components can get different data depending on what the parent gives it. Props are more flexible than HTML attributes, as any JavaScript value is a valid prop value, and JSX is a valid prop value as well.</p>
-          <p>🔹State: This is how a component can remember things (like a memory) after a component has changed in some way and needs to render again. That happens usually when a user is interacting with their browser. Some examples of things that a component could use as state are: shopping cart items in an online shopping app, an image being viewed in a gallery of photos, or the number of times a user clicked a button.</p>
-          <p>🔹Hooks: These are functions that React provides to use React features, like the state that I mentioned above.</p>
-          <p>🔹useState Hook: This hook is the starting point to creating a state variable in React. When using useState, you add a starting value that is called the “initial state”, and it returns a variable that holds the current state, and a function that updates the state when the function is called.</p>
-          <p>🔹Render: This is the process of React that prepares / creates a component by calling the function. When a parent component is rendered, its children components are also rendered, and so on. When rendering is done, then React eventually updates the browser DOM. </p>
-          </div>
-         <br>
-         <br>
-         <br>
-         <p>Next time, I will demonstrate how to create a simple To-Do list in React! 😊</p>
-         <br>
-         <br>
+  <body>
+    <div class="header">
+      <h1>
+        <img
+          className="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          height="70"
+        />
+        React Simple To-Do app
+      </h1>
     </div>
+    <div class="subheader">
+      <span class="name">Debora Kwon</span>
+    </div>
+    <div class="row">
+      <div class="card">
+        <br />
+        <br />
+        <h2>Todo App</h2>
 
+        <p>
+          In this blog post, I will show you how to create a To-do app in React
+          with the concepts that I showed from the first blog post (Add the
+          first blog1 link here) as well as new concepts that will be explained
+          later on.
+        </p>
+        <p>
+          In this To-do app, you will be able to create, display, update, and
+          delete todo items. These features will use the “useState()” hook to
+          keep track of changes to the todo list. There will also be dynamic
+          styles used based on whether a todo item is done or not done.
+        </p>
+        <p>
+          While writing the different features of the todo app, there will be
+          multiple components created for better readability instead of creating
+          just a single component (App component) with everything inside of it.
+        </p>
+        <p>New concepts that will be learned:</p>
+        <p>🔹 Using the map function on an array to display items</p>
 
-<div class="footer">
-  <h2><a href="https://github.com/Debora-k"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" height="35"></a> | <a href="https://www.linkedin.com/in/debora-kwon-997850220/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" height="25"></a></h2>
-</div>
+        <p>🔹 Using a form in React and handling the form submit</p>
 
-</body>
+        <p>🔹 Adding a new item to an array state variable</p>
+
+        <p>🔹 Modifying an item in an array state variable</p>
+
+        <p>🔹 Deleting an item in an array state variable</p>
+        <p>
+          These concepts will be explained in this blog post as you read
+          through.
+        </p>
+        <h1>Part 1: Using create-react-app to setup the app</h1>
+        <p>
+          1. Create the react app by opening a terminal an entering this
+          command:
+        </p>
+        <p>npx create-react-app todo-list</p>
+        <p>
+          2. Open the folder “todo-list” in your code editor (e.g. in VS Code)
+        </p>
+        <p>
+          3. To start running the app, open a terminal and run this command:
+        </p>
+        <p>npm start</p>
+        <h1>Part 2: Adding basic styling</h1>
+        <p>
+          We will add basic styling so that our app displays the todo items in a
+          simple and friendly way.
+        </p>
+        <p>
+          4. Open App.css and change the contents to the css below. This styling
+          is basic styling used for creating a background for the app, and
+          styling for each todo item:
+
+          <img class="example" src="./AppCss.png" />
+        </p>
+        <h1>Part 3: Showing To-Do Items</h1>
+        <p>
+          5. Open App.jsx and change the contents to the following code below.
+        </p>
+        <img class="example" src="./App1.png" />
+
+        <p>
+          This code creates a state variable called “todos” that will store the
+          data for all the todo items in an array. In the useState there are
+          three todo items which are being used as fake data so that we can
+          start showing todo items.
+        </p>
+        <p>
+          Remember from the first blog post, that “useState()” will remember its
+          current value when rendering for achieving an interactive user
+          experience.
+        </p>
+        <p>
+          So far, this is what the app will look like in the browser, no todo
+          items displayed yet!
+          <img class="example" src="./Result1.png" />
+        </p>
+        <br />
+        <p>
+          6. Use the map() function with the “todos” array to display the todo
+          items
+        </p>
+        <p>
+          <b>New concept</b>: Using the map function on an array to display
+          items
+        </p>
+        <p>
+          In React, one way to show multiple items from an array in the app is
+          to use the “map()” function. See this example and then see the
+          explanation below
+          <img class="example" src="./ConceptMapExample.png" />
+        </p>
+        <p>
+          • First of all, the example above creates an array called “data” with
+          the useState() hook and that array contains items with objects like “{
+          id: …, name: “...”, role: “...”}”
+        </p>
+        <p>
+          • Then, on line 11, the “map()” function is used on the “data” array
+          with an arrow function inside the round brackets like: “(emp) =&gt;
+          (…)”
+        </p>
+        <p>
+          • The map() function will loop through each item in the “data” array
+          and call the arrow function each time. The result for each item is
+          inside the round brackets after =&gt; which is “&lt;div&gt; …
+          &lt;/div&gt;”
+        </p>
+        <p>
+          • “emp” is a parameter for an item from the “data” array. The name can
+          be changed to whatever you want. For example, the first time the map()
+          function loops, emp will be the value “{ id: 10, name: “Alex”, role:
+          “Developer” }”
+        </p>
+        <p>
+          • To show data from the “emp” parameter, use curly brackets
+          “{emp.fieldName}” like in the example “{emp.name}” and “{emp.role}”
+        </p>
+        <img class="example" src="./ConceptMapResult.png" />
+
+        <p>
+          <i>Back to the todo app…</i>
+        </p>
+        <p>
+          Now, update the code in the return ( … ) part of the App.jsx file:
+
+          <img class="example" src="./App2.png" />
+        </p>
+        <p>
+          In this step, we used “todos.map((todo, index) =&gt; ( ... ))” to
+          display each todo in the “todos” array by looping through each todo
+          item to create a div with the todo text inside.
+        </p>
+        <p><b>New concept</b>: “key” attribute in components / JSX elements</p>
+        <p>
+          Also, we set “key={index}” because React requires that JSX elements
+          that are directly inside of “map(...)” have a “key”. As a reminder,
+          “JSX elements” include tags like “&lt;div&gt;” or components like
+          “&lt;Component /&gt;”. React uses the “key” to correctly update the
+          app when items are moved around, inserted, or deleted. The key should
+          be unique for an element, such as a unique “id” in data. In our todo
+          app, our todos do not have an id, so we used the index as the key.
+        </p>
+        <p>
+          The app should look like this now:
+          <img class="example" src="./Result2.png" />
+        </p>
+        <p>
+          7. Splitting up the code: We can make the App component smaller by
+          creating a Todo component in a separate file and using it in the App
+          component like “&lt;Todo … /&gt;”. See below for the changes to the
+          code
+        </p>
+        <p>
+          Making the code for each component smaller is helpful to understand
+          each component more easily, without as many details to process at one
+          time
+        </p>
+        <p>
+          In new file Todo.jsx in src/ folder:
+          <img class="example" src="./Todo1.png" />
+        </p>
+        <p>
+          In App.jsx, import the new Todo component:
+          <img class="example" src="./App3-import.png" />
+        </p>
+        <p>
+          Then in App.jsx, use the Todo component in the map() function:
+          <img class="example" src="./App3-return.png" />
+        </p>
+        <p>
+          This step will not change how the app is displayed in the browser, so
+          let's move on to the next part.
+        </p>
+
+        <h1>Part 4: Adding To-Do Items</h1>
+
+        <p>
+          In this part, you will learn how to add new todo items in your app. To
+          start out, you will learn about how to add items to an array that was
+          created with “useState()”:
+        </p>
+        <p><b>New concept</b>: Adding a new item to an array state variable</p>
+        <p>
+          In React, state variables are set using the “setNAME()” function from
+          the useState() line: “const [NAME, setNAME] = useState(…);”. However,
+          to add an item to an array state variable, the original array must be
+          copied, then the copied array can be modified. See the code and
+          explanations below:
+
+          <img class="example" src="./ConceptAddExample.png" />
+        </p>
+        <p>
+          • First of all, the example above creates an array called “data” with
+          the useState() hook and that array contains items with objects like “{
+          id: …, name: “...”, role: “...”}”
+        </p>
+        <p>
+          • Then, on line 10, we defined an “onAddData” function where there is
+          one parameter “newEmpData” which should have the data for an emp
+          including “id”, “name”, and “role”.
+        </p>
+        <p>
+          • On line 11, the original “data” array is copied using the spread
+          operator (the dot-dot-dot …) inside of square brackets.
+        </p>
+        <p>
+          • On line 12, we add the “newEmpData” object to the copied array
+          “newData”
+        </p>
+        <p>
+          • On line 13, we use “setData(...)” to update the data array so that
+          the next time the app render it will show the list including the
+          newest item.
+        </p>
+        <p>
+          • Finally, you can see an example of calling the “onAddData” function
+          which could be used when submitting a form to add a new employee.
+        </p>
+        <p>
+          8. In the App.jsx file, we will add a function “onAddTodo” that will
+          have a parameter “todoData” that will be added as a new todo item:
+
+          <img class="example" src="./App4.png" />
+        </p>
+        <p>
+          9. We also will be creating a new component called AddTodoForm that
+          will take input for a new todo item. This will use a &lt;form&gt;, so
+          we will first learn about how to use form in React to handle form
+          submitting:
+        </p>
+        <p>
+          <b>New concept</b>: Using a form in React and handling the form submit
+        </p>
+        <p>
+          In React, a &lt;form&gt; can be used to add new data to an app. There
+          are several parts including handling onSubmit, preventDefault(), and
+          controlling inputs that will be discussed below:
+          <img class="exampleWide" src="./ConceptFormExample.png" />
+        </p>
+        <p>
+          • First of all, the example above creates an object called “empData”
+          with the useState() hook with the fields “name” and “role”
+        </p>
+        <p>
+          • Then, on line 6, we defined aa “handleSubmit” function where there
+          is one parameter “e” for the event that called the “handleSubmit”
+          function.
+        </p>
+        <p>
+          • On line 7 we used “e.preventDefault()” to stop the browser from
+          refreshing the page after submitting
+        </p>
+        <p>
+          • On line 8, there is validation to make sure that the name and role
+          are not empty.
+        </p>
+        <p>
+          • On line 9, we print a message to the browser. This is where the new
+          data could be added to a backend, or to an array of employees.
+        </p>
+        <p>
+          • On line 10, the “empData” state variable is reset back to being
+          empty
+        </p>
+        <p>
+          • On lines 17 and 23, we are controlling the value of the inputs
+          depending on the current values in empData. This is what lets us clear
+          the inputs after the form is submitted.
+        </p>
+        <p>
+          • On Lines 18 and 24, we are using the onChange attribute to update
+          the name and role in the “empData” state variable.
+        </p>
+        <p>
+          Here is the result after submitting:
+          <img class="exampleShort" src="./ConceptFormResult.png" />
+        </p>
+        <p><i>Back to the todo app…</i></p>
+        <p>
+          9. <i>(continued)</i> This new component will also use “useState()” to
+          keep track of what the user typed in and then will handle the form
+          submit (e.g. when the user presses the "enter” key in the form, or
+          when the submit button is clicked). It will also check that the “text”
+          for the new todo item is not empty.
+        </p>
+        <p>
+          In a new file "AddTodoForm.jsx" in src/ folder add the following code:
+          <img class="exampleWide" src="./AddTodoForm1.png" />
+        </p>
+        <p>
+          Then, add this new AddTodoForm component to your App component and
+          pass the onAddTodo function to the AddTodoForm component
+        </p>
+        <p>
+          In App.jsx, import the new AddTodoForm component:
+          <img class="exampleShort" src="./App5-import.png" />
+        </p>
+        <p>
+          In App.jsx, use the AddTodoForm component:
+          <img class="exampleShort" src="./App5-return.png" />
+        </p>
+        <p>
+          Open your application in a web browser. You should be able to see the
+          original todo list items from the fake data and now a form at the top
+          that allows you to add a new todo item:
+          <img class="example" src="./Result3.png" />
+        </p>
+        <p>
+          Now that you can create todo items, we will move on to being able to
+          update items to being completed, and then showing them in a separate
+          “completed” todo list.
+        </p>
+
+        <h1>Part 5 - Updating To-Do Items</h1>
+        <p>
+          10. It's time to allow completing items to move then to the
+          “completed” section of the todo app. First, we will add more data to
+          the todos array in the App component:
+          <img class="example" src="./App6-state.png" />
+        </p>
+        <p><b>New concept</b>: Updating an item in an array state variable</p>
+        <p>
+          In React, when updating items in an array state variable, we still
+          start by copying the original array, then modifying the item that we
+          want to modify by creating an copy of that item. See the code and
+          explanations below:
+          <img class="example" src="./ConceptUpdateExample.png" />
+        </p>
+        <p>
+          • First of all, the example above creates an array called “data” with
+          the useState() hook and that array contains items with objects like “{
+          id: …, name: “...”, role: “...”}”
+        </p>
+        <p>
+          • Then, on line 10, we defined an “onUpdateData” function where there
+          is one parameter “emp” which should have the data for an emp including
+          “id”, “name”, and “role”, and two more parameters for “newName” and
+          “newRole” to update those fields for the specific emp.
+        </p>
+        <p>
+          • On line 11, the original “data” array is copied using the spread
+          operator (the dot-dot-dot …) inside of square brackets.
+        </p>
+        <p>
+          • On line 12, we get the index (position in the array) for the “emp”
+          and change that array item to be a copy of the emp data by using
+          “…emp”. Also, the name and role are updated to be the values in
+          newName and newRole.
+        </p>
+        <p>
+          • On line 13, we use “setData(...)” to update the data array so that
+          the next time the app render it will show the list including the
+          updated item.
+        </p>
+        <p>
+          • Finally, you can see an example of calling the “onUpdateData”
+          function which could be used when submitting a form to edit users
+        </p>
+        <p>
+          <i>Back to the todo app…</i>
+        </p>
+        <p>
+          10. <i>(continued)</i> Secondly, we will create a function “onDone”
+          that will set a todo item to be done and it will set the completed
+          date for that item to be the current date:
+          <img class="exampleShort" src="./App6-onDone.png" />
+        </p>
+        <p>
+          Next, create a section for “Completed Todos”, and then start filtering
+          the “Todos” and “Completed Todos” section by todos that are completed
+          or not. Todos that are completed (isDone === true) should go into the
+          “Completed Todos” section. Otherwise (isDone === false), they should
+          go into the “Todos” section. Also, pass the “onDone” function to the
+          Todo component in the return part of App.jsx. We will add the code tor
+          the Todo component soon:
+          <img class="example" src="./App6-return.png" />
+        </p>
+
+        <p>
+          Finally, update the Todo component code to include the “onDone”
+          function as a prop, to show the completed date (if it is defined), and
+          to show the “Complete” button if the todo is not completed:
+          <img class="exampleShort" src="./Todo2.png" />
+        </p>
+        <p>
+          All these changes will look like this in the browser (I completed a
+          task to show it below):
+          <img class="example" src="./Result4.png" />
+        </p>
+
+        <h1>Part 6 - Deleting To-Do Items</h1>
+        <p>
+          Finally, being able to delete todo items that have already been
+          completed will help to increase a user's focus on important things in
+          the app. This will involve learning one more concept to deleting items
+          from an array state variable:
+          <img class="example" src="./ConceptDeleteExample.png" />
+        </p>
+        <p><b>New concept</b>: Deleting an item in an array state variable</p>
+        <p>
+          In React, when deleting items in an array state variable, we still
+          start by copying the original array, then removing that item from the
+          copied array. See the code and explanations below:
+        </p>
+        <p>
+          • First of all, the example above creates an array called “data” with
+          the useState() hook and that array contains items with objects like “{
+          id: …, name: “...”, role: “...”}”
+        </p>
+        <p>
+          • Then, on line 10, we defined an “onDeleteData” function where there
+          is one parameter “emp” which should be the item that we want to delete
+          from “data”.
+        </p>
+        <p>
+          • On line 11, the original “data” array is copied using the spread
+          operator (the dot-dot-dot …) inside of square brackets.
+        </p>
+        <p>
+          • On line 12, we get the index (position in the array) for the “emp”
+          and using the “splice()” function, it will remove the item at that
+          position. The second parameter “1” means only one item should be
+          removed.
+        </p>
+        <p>
+          • On line 13, we use “setData(...)” to update the data array so that
+          the next time the app render it will show the list including the
+          updated item.
+        </p>
+        <p>
+          • Finally, you can see an example of calling the “onDeleteData”
+          function which could be used when clicking a button to delete a user
+        </p>
+        <p>
+          <i>Back to the todo app…</i>
+        </p>
+        <p>
+          11. Now we will create a function “onDelete” that will delete a todo
+          item from the “todos” array. Also, we will pass the “onDelete”
+          function to the Todo component:
+          <img class="example" src="./AppFinal-onDelete.png" />
+        </p>
+        <p>
+          Finally, in the Todo component we will use the “onDelete” function and
+          show a “Delete” button if the todo is already completed/done:
+          <img class="example" src="./TodoFinal.png" />
+        </p>
+        <p>
+          Open your application in a web browser. There will be three to-do
+          items displayed. There will also be a delete button for removing
+          completed to-do items. I have completed one of the todo items to show
+          the different state:
+          <img class="example" src="./ResultFinal.png" />
+        </p>
+        <p>
+          And that's all it takes to create a simple todo app in React! I hope
+          you learned a lot from this tutorial.
+        </p>
+        <br />
+        <br />
+        <br />
+        <video width="100%" controls>
+          <source />
+        </video>
+        <p>This is a demonstration video!</p>
+        <br />
+        <br />
+      </div>
+      <div class="footer">
+        <h2>
+          <a href="https://github.com/Debora-k">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+              height="35"
+          /></a>
+          |
+          <a href="https://www.linkedin.com/in/debora-kwon-997850220/"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+              height="25"
+          /></a>
+        </h2>
+      </div>
+    </div>
+  </body>
 </html>
-
-
-
-
-

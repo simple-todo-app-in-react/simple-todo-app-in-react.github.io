@@ -34,17 +34,25 @@ h3 {
   font-weight: bold;
 }
 
+.exampleShort {
+  max-width: 90%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .example {
-  width:500px;
+  max-width: 90%;
   height: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.examplePrettier {
-  width:800px;
-  height: 350px;
+.exampleWide {
+  width: 90%;
+  height: 600px;
   display: block;
   margin-left: auto;
   margin-right: auto;
