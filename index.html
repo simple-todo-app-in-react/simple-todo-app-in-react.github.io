@@ -26,52 +26,71 @@
       <div class="card">
         <br />
         <br />
-        <h2>Todo App</h2>
+        <h2>How to Create a Simple Todo App</h2>
 
         <p>
           In this blog post, I will show you how to create a To-do app in React
-          with the concepts that I showed from the first blog post (Add the
-          first blog1 link here) as well as new concepts that will be explained
-          later on.
+          with the concepts that I showed from the
+          <a href="https://debora-k.github.io">first blog post</a> as well as
+          new concepts that will be explained later on.
         </p>
         <p>
           In this To-do app, you will be able to create, display, update, and
-          delete todo items. These features will use the “useState()” hook to
-          keep track of changes to the todo list. There will also be dynamic
-          styles used based on whether a todo item is done or not done.
+          delete todo items. These features will use the "<span
+            class="darkYellow"
+            >useState</span
+          ><span class="brackets">()</span>" hook to keep track of changes to
+          the todo list. There will also be dynamic styles used based on whether
+          a todo item is done or not done.
         </p>
         <p>
           While writing the different features of the todo app, there will be
           multiple components created for better readability instead of creating
-          just a single component (App component) with everything inside of it.
+          just a single component (App component which is in the App.jsx file)
+          with everything inside of it.
         </p>
-        <p>New concepts that will be learned:</p>
-        <p>🔹 Using the map function on an array to display items</p>
+        <div class="textbox">
+          <p>New concepts that will be learned:</p>
+          <p>
+            🔹 Using the <span class="darkYellow">map</span> function on an
+            array to display items
+          </p>
 
-        <p>🔹 Using a form in React and handling the form submit</p>
+          <p>🔹 Using a form in React and handling the form submit</p>
 
-        <p>🔹 Adding a new item to an array state variable</p>
+          <p>🔹 Adding a new item to an array state variable</p>
 
-        <p>🔹 Modifying an item in an array state variable</p>
+          <p>🔹 Modifying an item in an array state variable</p>
 
-        <p>🔹 Deleting an item in an array state variable</p>
-        <p>
-          These concepts will be explained in this blog post as you read
-          through.
-        </p>
+          <p>🔹 Deleting an item in an array state variable</p>
+          <p>
+            These concepts will be explained in this blog post as you read
+            through.
+          </p>
+        </div>
         <h1>Part 1: Using create-react-app to setup the app</h1>
         <p>
-          1. Create the react app by opening a terminal an entering this
+          1. Make sure you have Node.js installed on your computer. Node.js is
+          required to use "npx" or "npm" commands. You can download it from
+          here:
+          <a href="https://nodejs.org/">https://nodejs.org</a>
+        </p>
+        <p>
+          2. Create the react app by opening a terminal an entering this
           command:
         </p>
         <p>npx create-react-app todo-list</p>
         <p>
-          2. Open the folder “todo-list” in your code editor (e.g. in VS Code)
+          3. Open the folder "todo-list" in your code editor (e.g. in VS Code)
+          <img class="example" src="part1-openFolder.png" />
         </p>
         <p>
-          3. To start running the app, open a terminal and run this command:
+          4. To start running the app, open a terminal and run this command:
         </p>
-        <p>npm start</p>
+        <p>
+          npm start
+          <img class="example" src="part1-start.png" />
+        </p>
         <h1>Part 2: Adding basic styling</h1>
         <p>
           We will add basic styling so that our app displays the todo items in a
@@ -91,15 +110,23 @@
         <img class="example" src="./App1.png" />
 
         <p>
-          This code creates a state variable called “todos” that will store the
-          data for all the todo items in an array. In the useState there are
-          three todo items which are being used as fake data so that we can
-          start showing todo items.
+          This code creates a state variable called "<span class="darkBlue"
+            >todos</span
+          >" that will store the data for all the todo items in an array. There
+          is also a function "<span class="darkYellow">setTodos</span>" that is
+          used to update the "<span class="darkBlue">todos</span>" variable,
+          which includes adding, updating, or deleting items in the array.
         </p>
         <p>
-          Remember from the first blog post, that “useState()” will remember its
-          current value when rendering for achieving an interactive user
-          experience.
+          In the "<span class="darkYellow">useState</span
+          ><span class="brackets">()</span>" there are three todo items which
+          are being used as fake data so that we can start showing todo items.
+        </p>
+        <p>
+          Remember from the first blog post, that "<span class="darkYellow"
+            >useState</span
+          ><span class="brackets">()</span>" will remember its current value
+          when rendering for achieving an interactive user experience.
         </p>
         <p>
           So far, this is what the app will look like in the browser, no todo
@@ -107,79 +134,126 @@
           <img class="example" src="./Result1.png" />
         </p>
         <br />
+        <br />
         <p>
-          6. Use the map() function with the “todos” array to display the todo
-          items
+          6. Use the <span class="darkYellow">map</span
+          ><span class="brackets">()</span> function with the "<span
+            class="brightBlue"
+            >todos</span
+          >" array to display the todo items.
         </p>
+        <div class="textbox">
+          <p>
+            <b>New concept</b>: Using the
+            <span class="darkYellow">map</span> function on an array to display
+            items
+          </p>
+          <p>
+            ❗❗ <i>New concept examples are not related to the todo app.</i>
+          </p>
+          <p>
+            In React, one way to show multiple items from an array in the app is
+            to use the "<span class="darkYellow">map</span
+            ><span class="brackets">()</span>" function. See this example and
+            then see the explanation below
+            <img class="example" src="./ConceptMapExample.png" />
+          </p>
+          <p>
+            • First of all, the example above creates an array called "data"
+            with the <span class="darkYellow">useState</span
+            ><span class="brackets">()</span> hook and that array contains items
+            with objects like "{ <span class="brightBlue">id</span>: …,
+            <span class="brightBlue">name</span>: "...",
+            <span class="brightBlue">role</span>: "..."}"
+          </p>
+          <p>
+            • Then, on line 11, the "<span class="darkYellow">map</span
+            ><span class="brackets">()</span>" function is used on the "data"
+            array with an arrow function inside the round brackets like: "(<span
+              class="brightBlue"
+              >emp</span
+            >) =&gt; (…)"
+          </p>
+          <p>
+            • The <span class="darkYellow">map</span
+            ><span class="brackets">()</span> function will loop through each
+            item in the "data" array and call the arrow function each time. The
+            result for each item is inside the round brackets after =&gt; which
+            is "&lt;div&gt; … &lt;/div&gt;"
+          </p>
+          <p>
+            • "<span class="brightBlue">emp</span>" is a parameter for an item
+            from the "data" array. The <span class="brightBlue">name</span> can
+            be changed to whatever you want. For example, the first time the
+            <span class="darkYellow">map</span>() function loops,
+            <span class="brightBlue">emp</span> will be the value "{
+            <span class="brightBlue">id</span>: 10,
+            <span class="brightBlue">name</span>: "Alex",
+            <span class="brightBlue">role</span>: "Developer" }"
+          </p>
+          <p>
+            • To show data from the "<span class="brightBlue">emp</span>"
+            parameter, use curly brackets "{<span class="brightBlue">emp</span
+            >.<span class="brightBlue">fieldName</span>}" like in the example
+            "{<span class="brightBlue">emp</span>.<span class="brightBlue"
+              >name</span
+            >}" and "{<span class="brightBlue">emp</span>.<span
+              class="brightBlue"
+              >role</span
+            >}"
+          </p>
+          <img class="example" src="./ConceptMapResult.png" />
+        </div>
+        <p><i>Back to the todo app…</i></p>
+        <br />
         <p>
-          <b>New concept</b>: Using the map function on an array to display
-          items
-        </p>
-        <p>
-          In React, one way to show multiple items from an array in the app is
-          to use the “map()” function. See this example and then see the
-          explanation below
-          <img class="example" src="./ConceptMapExample.png" />
-        </p>
-        <p>
-          • First of all, the example above creates an array called “data” with
-          the useState() hook and that array contains items with objects like “{
-          id: …, name: “...”, role: “...”}”
-        </p>
-        <p>
-          • Then, on line 11, the “map()” function is used on the “data” array
-          with an arrow function inside the round brackets like: “(emp) =&gt;
-          (…)”
-        </p>
-        <p>
-          • The map() function will loop through each item in the “data” array
-          and call the arrow function each time. The result for each item is
-          inside the round brackets after =&gt; which is “&lt;div&gt; …
-          &lt;/div&gt;”
-        </p>
-        <p>
-          • “emp” is a parameter for an item from the “data” array. The name can
-          be changed to whatever you want. For example, the first time the map()
-          function loops, emp will be the value “{ id: 10, name: “Alex”, role:
-          “Developer” }”
-        </p>
-        <p>
-          • To show data from the “emp” parameter, use curly brackets
-          “{emp.fieldName}” like in the example “{emp.name}” and “{emp.role}”
-        </p>
-        <img class="example" src="./ConceptMapResult.png" />
-
-        <p>
-          <i>Back to the todo app…</i>
-        </p>
-        <p>
-          Now, update the code in the return ( … ) part of the App.jsx file:
+          Now, update the code in the <span class="violet">return</span> ( … ) part of the App.jsx file:
 
           <img class="example" src="./App2.png" />
         </p>
         <p>
-          In this step, we used “todos.map((todo, index) =&gt; ( ... ))” to
-          display each todo in the “todos” array by looping through each todo
-          item to create a div with the todo text inside.
+          In this step, we used "<span class="brightBlue">todos</span>.<span
+            class="darkYellow"
+            >map</span
+          >((todo, index) =&gt; ( ... ))" to display each todo in the "<span
+            class="brightBlue"
+            >todos</span
+          >" array by looping through each todo item to create a div with the
+          todo text inside.
         </p>
-        <p><b>New concept</b>: “key” attribute in components / JSX elements</p>
-        <p>
-          Also, we set “key={index}” because React requires that JSX elements
-          that are directly inside of “map(...)” have a “key”. As a reminder,
-          “JSX elements” include tags like “&lt;div&gt;” or components like
-          “&lt;Component /&gt;”. React uses the “key” to correctly update the
-          app when items are moved around, inserted, or deleted. The key should
-          be unique for an element, such as a unique “id” in data. In our todo
-          app, our todos do not have an id, so we used the index as the key.
-        </p>
+        <div class="textbox">
+          <p>
+            <b>New concept</b>: "<span class="brightBlue">key</span>" attribute
+            in components / JSX elements
+          </p>
+          <p>
+            Also, we set "<span class="brightBlue">key</span>={index}" because
+            React requires that JSX elements that are directly inside of "<span
+              class="darkYellow"
+              >map</span
+            >(...)" have a "<span class="brightBlue">key</span>". As a reminder,
+            "JSX elements" include tags like "&lt;div&gt;" or components like
+            "&lt;Component /&gt;". React uses the "<span class="brightBlue"
+              >key</span
+            >" to correctly update the app when items are moved around,
+            inserted, or deleted. The <span class="brightBlue">key</span> should
+            be unique for an element, such as a unique "id" in data. In our todo
+            app, our
+            <span class="brightBlue">todos</span>
+            do not have an id, so we used the index as the
+            <span class="brightBlue">key</span>.
+          </p>
+        </div>
         <p>
           The app should look like this now:
           <img class="example" src="./Result2.png" />
         </p>
+        <br />
+        <br />
         <p>
           7. Splitting up the code: We can make the App component smaller by
           creating a Todo component in a separate file and using it in the App
-          component like “&lt;Todo … /&gt;”. See below for the changes to the
+          component like "&lt;Todo … /&gt;". See below for the changes to the
           code
         </p>
         <p>
@@ -193,10 +267,12 @@
         </p>
         <p>
           In App.jsx, import the new Todo component:
-          <img class="example" src="./App3-import.png" />
+          <img class="exampleShort" src="./App3-import.png" />
         </p>
         <p>
-          Then in App.jsx, use the Todo component in the map() function:
+          Then in App.jsx, use the Todo component in the
+          <span class="darkYellow">map</span><span class="gold">()</span>
+          function:
           <img class="example" src="./App3-return.png" />
         </p>
         <p>
@@ -209,111 +285,158 @@
         <p>
           In this part, you will learn how to add new todo items in your app. To
           start out, you will learn about how to add items to an array that was
-          created with “useState()”:
+          created with "<span class="darkYellow">useState</span
+          ><span class="brackets">()</span>".
         </p>
-        <p><b>New concept</b>: Adding a new item to an array state variable</p>
-        <p>
-          In React, state variables are set using the “setNAME()” function from
-          the useState() line: “const [NAME, setNAME] = useState(…);”. However,
-          to add an item to an array state variable, the original array must be
-          copied, then the copied array can be modified. See the code and
-          explanations below:
+        <div class="textbox">
+          <p>
+            <b>New concept</b>: Adding a new item to an array state variable
+          </p>
+          <p>
+            In React, state variables are set using the "<span
+              class="darkYellow"
+              >setNAME</span
+            ><span class="brackets">()</span>" function from the
+            <span class="darkYellow">useState</span>() line: "const [<span
+              class="darkBlue"
+              >NAME</span
+            >, <span class="darkYellow">setNAME</span>] =
+            <span class="darkYellow">useState</span>(…);". However, to add an
+            item to an array state variable, the original array must be copied,
+            then the copied array can be modified. See the code and explanations
+            below:
 
-          <img class="example" src="./ConceptAddExample.png" />
-        </p>
+            <img class="example" src="./ConceptAddExample.png" />
+          </p>
+          <p>
+            • First of all, the example above creates an array called "<span class="brightBlue">data</span>"
+            with the <span class="darkYellow">useState</span>() hook and that
+            array contains items with objects like "{
+            <span class="brightBlue">id</span>: …,
+            <span class="brightBlue">name</span>: "...",
+            <span class="brightBlue">role</span>: "..."}"
+          </p>
+          <p>
+            • Then, on line 10, we defined an "onAddData" function where there
+            is one parameter "<span class="brightBlue">newEmpData</span>" which should have the <span class="brightBlue">data</span> for an emp
+            including "<span class="brightBlue">id</span>", "<span
+              class="brightBlue"
+              >name</span
+            >", and "<span class="brightBlue">role</span>".
+          </p>
+          <p>
+            • On line 11, the original "<span class="brightBlue">data</span>" array is copied using the spread
+            operator (the dot-dot-dot …) inside of square brackets.
+          </p>
+          <p>
+            • On line 12, we add the "<span class="brightBlue">newEmpData</span>" object to the copied array
+            "<span class="brightBlue">newData</span>"
+          </p>
+          <p>
+            • On line 13, we use "<span class="darkYellow">setData</span>(...)"
+            to update the <span class="brightBlue">data</span> array so that the next time the app render it
+            will show the list including the newest item.
+          </p>
+          <p>
+            • Finally, you can see an example of calling the "<span
+              class="darkYellow"
+              >onAddData</span
+            >" function which could be used when submitting a form to add a new
+            employee.
+          </p>
+        </div>
+        <p><i>Back to the todo app…</i></p>
+        <br />
         <p>
-          • First of all, the example above creates an array called “data” with
-          the useState() hook and that array contains items with objects like “{
-          id: …, name: “...”, role: “...”}”
-        </p>
-        <p>
-          • Then, on line 10, we defined an “onAddData” function where there is
-          one parameter “newEmpData” which should have the data for an emp
-          including “id”, “name”, and “role”.
-        </p>
-        <p>
-          • On line 11, the original “data” array is copied using the spread
-          operator (the dot-dot-dot …) inside of square brackets.
-        </p>
-        <p>
-          • On line 12, we add the “newEmpData” object to the copied array
-          “newData”
-        </p>
-        <p>
-          • On line 13, we use “setData(...)” to update the data array so that
-          the next time the app render it will show the list including the
-          newest item.
-        </p>
-        <p>
-          • Finally, you can see an example of calling the “onAddData” function
-          which could be used when submitting a form to add a new employee.
-        </p>
-        <p>
-          8. In the App.jsx file, we will add a function “onAddTodo” that will
+          8. In the App.jsx file, we will add a function "onAddTodo" that will
           have a parameter "value" that will be added as a new todo item:
 
           <img class="example" src="./App4.png" />
         </p>
+        <br />
         <p>
           9. We also will be creating a new component called AddTodoForm that
           will take input for a new todo item. This will use a &lt;form&gt;, so
           we will first learn about how to use form in React to handle form
           submitting:
         </p>
-        <p>
-          <b>New concept</b>: Using a form in React and handling the form submit
-        </p>
-        <p>
-          In React, a &lt;form&gt; can be used to add new data to an app. There
-          are several parts including handling onSubmit, preventDefault(), and
-          controlling inputs that will be discussed below:
-          <img class="exampleWide" src="./ConceptFormExample.png" />
-        </p>
-        <p>
-          • First of all, the example above creates an object called “empData”
-          with the useState() hook with the fields “name” and “role”
-        </p>
-        <p>
-          • Then, on line 6, we defined aa “handleSubmit” function where there
-          is one parameter “e” for the event that called the “handleSubmit”
-          function.
-        </p>
-        <p>
-          • On line 7 we used “e.preventDefault()” to stop the browser from
-          refreshing the page after submitting
-        </p>
-        <p>
-          • On line 8, there is validation to make sure that the name and role
-          are not empty.
-        </p>
-        <p>
-          • On line 9, we print a message to the browser. This is where the new
-          data could be added to a backend, or to an array of employees.
-        </p>
-        <p>
-          • On line 10, the “empData” state variable is reset back to being
-          empty
-        </p>
-        <p>
-          • On lines 17 and 23, we are controlling the value of the inputs
-          depending on the current values in empData. This is what lets us clear
-          the inputs after the form is submitted.
-        </p>
-        <p>
-          • On Lines 18 and 24, we are using the onChange attribute to update
-          the name and role in the “empData” state variable.
-        </p>
-        <p>
-          Here is the result after submitting:
-          <img class="exampleShort" src="./ConceptFormResult.png" />
-        </p>
+        <div class="textbox">
+          <p>
+            <b>New concept</b>: Using a form in React and handling the form
+            submit
+          </p>
+          <p>
+            In React, a &lt;<span class="darkBlue">form</span>&gt; can be used
+            to add new data to an app. There are several parts including
+            handling <span class="brightBlue">onSubmit</span>,
+            <span class="darkYellow">preventDefault</span
+            ><span class="brackets">()</span>, and controlling inputs that will
+            be discussed below:
+            <img class="exampleWide" src="./ConceptFormExample.png" />
+          </p>
+          <p>
+            • First of all, the example above creates an object called "<span class="brightBlue">empData</span>"
+            with the <span class="darkYellow">useState</span
+            ><span class="brackets">()</span> hook with the fields "<span
+              class="brightBlue"
+              >name</span
+            >" and "<span class="brightBlue">role</span>"
+          </p>
+          <p>
+            • Then, on line 6, we defined a "<span class="darkYellow"
+              >handleSubmit</span
+            >" function where there is one parameter "e" for the event that
+            called the "<span class="darkYellow">handleSubmit</span>" function.
+          </p>
+          <p>
+            • On line 7 we used "e.<span class="darkYellow">preventDefault</span
+            ><span class="brackets">()</span>"" to stop the browser from
+            refreshing the page after submitting
+          </p>
+          <p>
+            • On line 8, there is validation to make sure that the
+            <span class="brightBlue">name</span> and
+            <span class="brightBlue">role</span>
+            are not empty.
+          </p>
+          <p>
+            • On line 9, we print a message to the browser. This is where the
+            new data could be added to a backend, or to an array of employees.
+          </p>
+          <p>
+            • On line 10, the "<span class="brightBlue">empData</span>" state
+            variable is reset back to being empty
+          </p>
+          <p>
+            • On lines 17 and 23, we are controlling the value of the inputs
+            depending on the current values in
+            <span class="brightBlue">empData</span>. This is what lets us clear
+            the inputs after the form is submitted.
+          </p>
+          <p>
+            • On Lines 18 and 24, we are using the
+            <span class="brightBlue">onChange</span> attribute to update the
+            <span class="brightBlue">name</span> and
+            <span class="brightBlue">role</span> in the "<span
+              class="brightBlue"
+              >empData</span
+            >" state variable.
+          </p>
+          <p>
+            Here is the result after submitting:
+            <img class="exampleShort" src="./ConceptFormResult.png" />
+          </p>
+        </div>
         <p><i>Back to the todo app…</i></p>
+        <br />
         <p>
-          9. <i>(continued)</i> This new component will also use “useState()” to
-          keep track of what the user typed in and then will handle the form
-          submit (e.g. when the user presses the "enter” key in the form, or
-          when the submit button is clicked). It will also check that the “text”
-          for the new todo item is not empty.
+          9. <i>(continued)</i> This new component will also use "<span
+            class="darkYellow"
+            >useState</span
+          ><span class="brackets">()</span>" to keep track of what the user
+          typed in and then will handle the form submit (e.g. when the user
+          presses "enter" in the form, or when the submit button is clicked). It
+          will also check that the "<span class="brightBlue">text</span>" for the new todo item is not empty.
         </p>
         <p>
           In a new file "AddTodoForm.jsx" in src/ folder add the following code:
@@ -337,81 +460,110 @@
           that allows you to add a new todo item:
           <img class="example" src="./Result3.png" />
         </p>
+        <br />
+        <br />
         <p>
           Now that you can create todo items, we will move on to being able to
           update items to being completed, and then showing them in a separate
-          “completed” todo list.
+          "completed" todo list.
         </p>
 
         <h1>Part 5 - Updating To-Do Items</h1>
         <p>
           10. It's time to allow completing items to move then to the
-          “completed” section of the todo app. First, we will add more data to
-          the todos array in the App component:
+          "completed" section of the todo app. First, we will add more data to
+          the <span class="brightBlue">todos</span> array in the App component:
           <img class="example" src="./App6-state.png" />
         </p>
-        <p><b>New concept</b>: Updating an item in an array state variable</p>
+        <div class="textbox">
+          <p><b>New concept</b>: Updating an item in an array state variable</p>
+          <p>
+            In React, when updating items in an array state variable, we still
+            start by copying the original array, then modifying the item that we
+            want to modify by creating an copy of that item. See the code and
+            explanations below:
+            <img class="example" src="./ConceptUpdateExample.png" />
+          </p>
+          <p>
+            • First of all, the example above creates an array called "data"
+            with the <span class="darkYellow">useState</span
+            ><span class="brackets">()</span> hook and that array contains items
+            with objects like "{ <span class="brightBlue">id</span>: …,
+            <span class="brightBlue">name</span>: "...",
+            <span class="brightBlue">role</span>: "..."}"
+          </p>
+          <p>
+            • Then, on line 10, we defined an "<span class="darkYellow"
+              >onUpdateData</span
+            >" function where there is one parameter "<span class="brightBlue"
+              >emp</span
+            >" which should have the data for an
+            <span class="brightBlue">emp</span> including "id", "<span
+              class="brightBlue"
+              >name</span
+            >", and "<span class="brightBlue">role</span>", and two more
+            parameters for "newName" and "newRole" to update those fields for
+            the specific <span class="brightBlue">emp</span>.
+          </p>
+          <p>
+            • On line 11, the original "data" array is copied using the spread
+            operator (the dot-dot-dot …) inside of square brackets.
+          </p>
+          <p>
+            • On line 12, we get the index (position in the array) for the
+            "<span class="brightBlue">emp</span>" and change that array item to
+            be a copy of the <span class="brightBlue">emp</span> data by using
+            "...<span class="brightBlue">emp</span>". Also, the <span class="brightBlue">name</span> and
+            <span class="brightBlue">role</span> are updated to be the values in
+            newName and newRole.
+          </p>
+          <p>
+            • On line 13, we use "<span class="darkYellow">setData</span>(...)"
+            to update the data array so that the next time the app render it
+            will show the list including the updated item.
+          </p>
+          <p>
+            • Finally, you can see an example of calling the "<span
+              class="darkYellow"
+              >onUpdateData</span
+            >" function which could be used when submitting a form to edit users
+          </p>
+        </div>
+        <p><i>Back to the todo app…</i></p>
+        <br />
         <p>
-          In React, when updating items in an array state variable, we still
-          start by copying the original array, then modifying the item that we
-          want to modify by creating an copy of that item. See the code and
-          explanations below:
-          <img class="example" src="./ConceptUpdateExample.png" />
-        </p>
-        <p>
-          • First of all, the example above creates an array called “data” with
-          the useState() hook and that array contains items with objects like “{
-          id: …, name: “...”, role: “...”}”
-        </p>
-        <p>
-          • Then, on line 10, we defined an “onUpdateData” function where there
-          is one parameter “emp” which should have the data for an emp including
-          “id”, “name”, and “role”, and two more parameters for “newName” and
-          “newRole” to update those fields for the specific emp.
-        </p>
-        <p>
-          • On line 11, the original “data” array is copied using the spread
-          operator (the dot-dot-dot …) inside of square brackets.
-        </p>
-        <p>
-          • On line 12, we get the index (position in the array) for the “emp”
-          and change that array item to be a copy of the emp data by using
-          “…emp”. Also, the name and role are updated to be the values in
-          newName and newRole.
-        </p>
-        <p>
-          • On line 13, we use “setData(...)” to update the data array so that
-          the next time the app render it will show the list including the
-          updated item.
-        </p>
-        <p>
-          • Finally, you can see an example of calling the “onUpdateData”
-          function which could be used when submitting a form to edit users
-        </p>
-        <p>
-          <i>Back to the todo app…</i>
-        </p>
-        <p>
-          10. <i>(continued)</i> Secondly, we will create a function “onDone”
-          that will set a todo item to be done and it will set the completed
+          10. <i>(continued)</i> Secondly, we will create a function "<span
+            class="darkYellow"
+            >onDone</span
+          >" that will set a todo item to be done and it will set the completed
           date for that item to be the current date:
           <img class="exampleShort" src="./App6-onDone.png" />
         </p>
         <p>
-          Next, create a section for “Completed Todos”, and then start filtering
-          the “Todos” and “Completed Todos” section by todos that are completed
-          or not. Todos that are completed (isDone === true) should go into the
-          “Completed Todos” section. Otherwise (isDone === false), they should
-          go into the “Todos” section. Also, pass the “onDone” function to the
-          Todo component in the return part of App.jsx. We will add the code tor
-          the Todo component soon:
+          Next, create a section for "Completed Todos", and then start filtering
+          the "Todos" and "Completed Todos" section by
+          <span class="brightBlue">todos</span> that are completed or not. Todos
+          that are completed (<span class="brightBlue">todo</span>.<span
+            class="brightBlue"
+            >isDone</span
+          >
+          === true) should go into the "Completed Todos" section. Otherwise
+          (<span class="brightBlue">todo</span>.<span class="brightBlue"
+            >isDone</span
+          >
+          === false), they should go into the "Todos" section. Also, pass the
+          "<span class="darkYellow">onDone</span>" function to the Todo
+          component in the <span class="violet">return</span> part of App.jsx. We will add the code tor the
+          Todo component soon:
           <img class="example" src="./App6-return.png" />
         </p>
 
         <p>
-          Finally, update the Todo component code to include the “onDone”
-          function as a prop, to show the completed date (if it is defined), and
-          to show the “Complete” button if the todo is not completed:
+          Finally, update the Todo component code to include the "<span
+            class="darkYellow"
+            >onDone</span
+          >" function as a prop, to show the completed date (if it is defined),
+          and to show the "Complete" button if the todo is not completed:
           <img class="exampleShort" src="./Todo2.png" />
         </p>
         <p>
@@ -425,56 +577,74 @@
           Finally, being able to delete todo items that have already been
           completed will help to increase a user's focus on important things in
           the app. This will involve learning one more concept to deleting items
-          from an array state variable:
-          <img class="example" src="./ConceptDeleteExample.png" />
+          from an array state variable.
         </p>
-        <p><b>New concept</b>: Deleting an item in an array state variable</p>
+        <div class="textbox">
+          <p><b>New concept</b>: Deleting an item in an array state variable</p>
+          <p>
+            In React, when deleting items in an array state variable, we still
+            start by copying the original array, then removing that item from
+            the copied array. See the code and explanations below:
+            <img class="example" src="./ConceptDeleteExample.png" />
+          </p>
+          <p>
+            • First of all, the example above creates an array called "data"
+            with the <span class="darkYellow">useState</span>() hook and that
+            array contains items with objects like "{
+            <span class="brightBlue">id</span>: …,
+            <span class="brightBlue">name</span>: "...",
+            <span class="brightBlue">role</span>: "..."}"
+          </p>
+          <p>
+            • Then, on line 10, we defined an "<span class="darkYellow"
+              >onDeleteData</span
+            >" function where there is one parameter "<span class="brightBlue"
+              >emp</span
+            >" which should be the item that we want to delete from "data".
+          </p>
+          <p>
+            • On line 11, the original "data" array is copied using the spread
+            operator (the dot-dot-dot …) inside of square brackets.
+          </p>
+          <p>
+            • On line 12, we get the index (position in the array) for the
+            "<span class="brightBlue">emp</span>" and using the "<span
+              class="darkYellow"
+              >splice</span
+            >()" function, it will remove the item at that position. The second
+            parameter "1" means only one item should be removed.
+          </p>
+          <p>
+            • On line 13, we use "<span class="darkYellow">setData</span>(...)"
+            to update the data array so that the next time the app render it
+            will show the list including the updated item.
+          </p>
+          <p>
+            • Finally, you can see an example of calling the "<span
+              class="darkYellow"
+              >onDeleteData</span
+            >" function which could be used when clicking a button to delete a
+            user
+          </p>
+        </div>
+        <p><i>Back to the todo app…</i></p>
+        <br />
         <p>
-          In React, when deleting items in an array state variable, we still
-          start by copying the original array, then removing that item from the
-          copied array. See the code and explanations below:
-        </p>
-        <p>
-          • First of all, the example above creates an array called “data” with
-          the useState() hook and that array contains items with objects like “{
-          id: …, name: “...”, role: “...”}”
-        </p>
-        <p>
-          • Then, on line 10, we defined an “onDeleteData” function where there
-          is one parameter “emp” which should be the item that we want to delete
-          from “data”.
-        </p>
-        <p>
-          • On line 11, the original “data” array is copied using the spread
-          operator (the dot-dot-dot …) inside of square brackets.
-        </p>
-        <p>
-          • On line 12, we get the index (position in the array) for the “emp”
-          and using the “splice()” function, it will remove the item at that
-          position. The second parameter “1” means only one item should be
-          removed.
-        </p>
-        <p>
-          • On line 13, we use “setData(...)” to update the data array so that
-          the next time the app render it will show the list including the
-          updated item.
-        </p>
-        <p>
-          • Finally, you can see an example of calling the “onDeleteData”
-          function which could be used when clicking a button to delete a user
-        </p>
-        <p>
-          <i>Back to the todo app…</i>
-        </p>
-        <p>
-          11. Now we will create a function “onDelete” that will delete a todo
-          item from the “todos” array. Also, we will pass the “onDelete”
-          function to the Todo component:
+          11. Now we will create a function "<span class="darkYellow"
+            >onDelete</span
+          >" that will delete a todo item from the "<span class="brightBlue"
+            >todos</span
+          >" array. Also, we will pass the "<span class="darkYellow"
+            >onDelete</span
+          >" function to the Todo component:
           <img class="example" src="./AppFinal-onDelete.png" />
         </p>
         <p>
-          Finally, in the Todo component we will use the “onDelete” function and
-          show a “Delete” button if the todo is already completed/done:
+          Finally, in the Todo component we will use the "<span
+            class="darkYellow"
+            >onDelete</span
+          >" function and show a "Delete" button if the todo is already
+          completed/done:
           <img class="example" src="./TodoFinal.png" />
         </p>
         <p>
@@ -484,15 +654,17 @@
           the different state:
           <img class="example" src="./ResultFinal.png" />
         </p>
+        <br />
+        <br />
         <p>
           And that's all it takes to create a simple todo app in React! I hope
-          you learned a lot from this tutorial.
+          you learned a lot from this tutorial. 😊
         </p>
         <br />
         <br />
         <br />
         <video width="100%" controls>
-          <source />
+          <source src="todo_demo.mp4" type="video/mp4" />
         </video>
         <p>This is a demonstration video!</p>
         <br />
